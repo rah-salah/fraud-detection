@@ -314,3 +314,4 @@ if __name__ == "__main__":
     fraud_df.to_csv("data/processed/fraud_processed.csv", index=False)
     credit_df.to_csv("data/processed/credit_processed.csv", index=False)
     logger.info("All preprocessing done!")
+
