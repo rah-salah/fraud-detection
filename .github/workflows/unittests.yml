@@ -1,0 +1,26 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ main, task-1 ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+          pip install flake8 pytest pandas numpy scikit-learn imbalanced-learn
+      - name: Run flake8
+        run: |
+          flake8 src/ --max-line-length=88 --ignore=E501,W503
+      - name: Run tests
+        run: |
+          pytest tests/ -v
