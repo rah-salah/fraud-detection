@@ -15,7 +15,7 @@ venv/
 .ipynb_checkpoints/
 
 # Models
-models/*.joblib
+models/
 mlruns/
 mlflow.db
 
