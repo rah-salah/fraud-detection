@@ -2,6 +2,7 @@
 data/
 *.csv
 *.pkl
+*.joblib
 
 # Python
 __pycache__/
@@ -14,8 +15,7 @@ venv/
 .ipynb_checkpoints/
 
 # Models
-models/*.pkl
-models/*.joblib
+models/
 
 # OS
 .DS_Store
